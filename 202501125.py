@@ -21,8 +21,8 @@ else:
         print("Factorial of",number,"is ")
         print(Factorial(number))
         print()
-        print("Fibonacci number of",number, "is")
         
+        print("Fibonacci number of",number, "is")
         for i in range(number):
             print(Fibonacci(i), end=" ")
 print()

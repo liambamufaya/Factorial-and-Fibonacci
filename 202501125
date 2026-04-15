@@ -1,0 +1,40 @@
+FUNCTION Factorial(x)
+    IF x == 1 THEN
+        RETURN 1
+    ELSE
+        RETURN x * Factorial(x - 1)
+    ENDIF
+END FUNCTION
+
+
+FUNCTION Fibonacci(x)
+    IF x == 1 THEN
+        RETURN 1
+    ELSE IF x == 0 THEN
+        RETURN 0
+    ELSE
+        RETURN Fibonacci(x - 1) + Fibonacci(x - 2)
+    ENDIF
+END FUNCTION
+
+
+BEGIN
+    DISPLAY "Enter number"
+    INPUT number
+
+    IF number <= 0 THEN
+        DISPLAY "Enter positive integer"
+    ELSE
+        DISPLAY "Factorial of", number, "is"
+        DISPLAY Factorial(number)
+
+        DISPLAY NEW LINE
+
+        DISPLAY "Fibonacci number of", number, "is"
+        FOR i FROM 0 TO number - 1 DO
+            DISPLAY Fibonacci(i) WITHOUT NEW LINE
+        END FOR
+    ENDIF
+
+    DISPLAY NEW LINE
+END
